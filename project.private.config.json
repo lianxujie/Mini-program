@@ -5,6 +5,13 @@
       "list": [
         {
           "name": "",
+          "pathName": "pages/message/message",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "pages/home/home",
           "query": "",
           "launchMode": "default",

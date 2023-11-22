@@ -3,12 +3,14 @@
     "pages/home/home",
     "pages/list/list",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/message/message"
     
   ],
   "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
-  },
+    "van-button": "@vant/weapp/button/index",
+    "my-numbers":"./components/numbers/numbers"
+    },
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"

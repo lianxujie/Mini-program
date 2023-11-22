@@ -1,17 +1,19 @@
-import {createStoreBindings} from 'mobx-miniprogram-bindings'
-import {store} from '../../store/store'
+import { createStoreBindings } from 'mobx-miniprogram-bindings'
+import { store } from '../../store/store'
 
 
 // pages/home/home.js
 Page({
-
-  onLoad:function (){
+  onLoad:function(options){
     //生命周期函数--监听页面加载
     this.storeBindings = createStoreBindings(this,{
       store,
       fields:['numA','numB','sum'],
       actions:['updateNum1']
     })
+  },
+  btnHandler1(e){
+  this.updateNum1(e.target.dataset.step)
   },
   onUnLoad:function (){
     //生命周期函数--监听页面卸载
@@ -79,8 +81,9 @@ Page({
   onShareAppMessage() {
 
   },
+
   async getInfo() {
-    const{data:res} =await p.request({
+    const{data:res} =await wx.p.request({
       methods:'GET',
       url:'',
       data:{name:'zs',age:20}

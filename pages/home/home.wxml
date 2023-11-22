@@ -1,13 +1,5 @@
 <!--pages/home/home.wxml-->
 <van-button type="primary"></van-button>
-<van-button type="danger" bindtap="getInfo"></van-button>
+<van-button type="danger" bindtap="getInfo">安安</van-button>
 
-//在页面的.js文件中，定义对应的tap事件函数
-async getInfo() {
-  const{data:res} =await p.request({
-    methods:'GET',
-    url:'',
-    data:{name:'zs',age:20}
-  })
-  console.log(res)
-}
+<!-- 在页面的.js文件中，定义对应的tap事件函数 -->

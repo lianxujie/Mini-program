@@ -1,13 +1,29 @@
+import {createStoreBindings} from 'mobx-miniprogram-bindings'
+import {store} from '../../store/store'
+
+
 // pages/home/home.js
 Page({
 
+  onLoad:function (){
+    //生命周期函数--监听页面加载
+    this.storeBindings = createStoreBindings(this,{
+      store,
+      fields:['numA','numB','sum'],
+      actions:['updateNum1']
+    })
+  },
+  onUnLoad:function (){
+    //生命周期函数--监听页面卸载
+    this.storeBindings.destroyStoreBindings()
+  },
   /**
    * 页面的初始数据
    */
   data: {
 
   },
-x
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -62,5 +78,13 @@ x
    */
   onShareAppMessage() {
 
+  },
+  async getInfo() {
+    const{data:res} =await p.request({
+      methods:'GET',
+      url:'',
+      data:{name:'zs',age:20}
+    })
+    console.log(res)
   }
 })

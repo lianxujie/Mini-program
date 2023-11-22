@@ -1,13 +1,18 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/list/list",
     "pages/index/index",
     "pages/logs/logs"
+    
   ],
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
-  "style": "v2",
   "renderer": "skyline",
   "rendererOptions": {
     "skyline": {

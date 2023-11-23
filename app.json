@@ -7,6 +7,24 @@
     "pages/message/message"
     
   ],
+  "subpackages": [
+    {
+      "root": "pkgA",
+      "name": "p1",
+      "pages": [
+        "pages/cat/cat",
+        "pages/dog/dog"
+      ]
+    },
+    {
+      "root": "pkgB",
+      "name": "p2",
+      "pages": [
+        "pages/apple/apple"
+      ],
+      "independent": true
+    }
+  ],
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
     "my-numbers":"./components/numbers/numbers"
